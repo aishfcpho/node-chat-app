@@ -23,7 +23,7 @@ var io = socketio.listen(server);
 router.use(express.static(path.resolve(__dirname, 'client')));
 var messages = [];
 var sockets = [];
-
+//VARIABLES ARRAYS
 io.on('connection', function (socket) {
     messages.forEach(function (data) {
       socket.emit('message', data);
